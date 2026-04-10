@@ -1,0 +1,29 @@
+:root {
+  --blue:        #0072B2;
+  --orange:      #E69F00;
+  --sky-blue:    #56B4E9;
+  --green:       #009E73;
+  --yellow:      #F0E442;
+  --vermillion:  #D55E00;
+  --purple:      #CC79A7;
+  --black:       #000000;
+}
+body {
+  background-color: #ffffff;
+  color: var(--black);
+}
+
+.button-primary {
+  background-color: var(--blue);
+  color: #ffffff;
+}
+
+.button-secondary {
+  background-color: var(--orange);
+  color: #000000;
+}
+
+.alert {
+  background-color: var(--vermillion);
+  color: #ffffff;
+}
