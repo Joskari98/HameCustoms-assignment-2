@@ -1,0 +1,2 @@
+This project is for the second assignment for Software Delivery Tools course.
+In this project there are nonsense issues and commits for practicing how to use github and azure tools.
