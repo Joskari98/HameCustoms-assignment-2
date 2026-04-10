@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign in with Apple</title>
+  <script
+    type="text/javascript"
+    src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js">
+  </script>
+</head>
+<body>
+  <div id="appleid-signin"></div>
+
+  <script>
+    AppleID.auth.init({
+      clientId: "YOUR_CLIENT_ID",
+      scope: "name email",
+      redirectURI: "https://yourdomain.com/auth/apple/callback",
+      state: "secure_random_string_here",
+      nonce: "another_random_string_here",
+      usePopup: true
+    });
+
+    AppleID.auth.renderButton(
+      document.getElementById("appleid-signin"),
+      {
+        type: "sign in",
+        color: "black",
+        border: true
+      }
+    );
+
+    document.addEventListener("AppleIDSignInOnSuccess", (event) => {
+      console.log("Apple login success:", event.detail);
+      // event.detail.authorization contains the auth data
+    });
