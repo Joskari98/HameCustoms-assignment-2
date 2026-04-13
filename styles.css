@@ -42,3 +42,17 @@ body {
   background-color: var(--vermillion);
   color: #ffffff;
 }
+
+.site-footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-link {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
