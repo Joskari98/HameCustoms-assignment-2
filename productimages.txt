@@ -1,0 +1,20 @@
+public class ProductService {
+
+    private static final String FALLBACK_IMAGE = "/images/fallback.png";
+
+    public String getImageUrl(Product product) {
+        if (product != null && product.getImage() != null) {
+            String mobileUrl = product.getImage().getMobileUrl();
+            String desktopUrl = product.getImage().getDesktopUrl();
+
+            if (mobileUrl != null && !mobileUrl.isEmpty()) {
+                return mobileUrl;
+            }
+
+            if (desktopUrl != null && !desktopUrl.isEmpty()) {
+                return desktopUrl;
+            }
+        }
+        return FALLBACK_IMAGE;
+    }
+}
